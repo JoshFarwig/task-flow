@@ -5,8 +5,8 @@ import localFont from "next/font/local";
 import { cn } from "@/lib/utils"; 
 
 const headingFont = localFont({ 
-    src: "../../public/fonts/postcss.config.woff2", 
-}); 
+    src: "../../public/fonts/postcåss.config.woff2", 
+});  
 
 export const Logo = () => { 
     return ( 

@@ -6,7 +6,6 @@ import { Medal, Weight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";  
 import { text } from "stream/consumers";
-
 const headingFont = localFont({ 
     src: "../../public/fonts/postcss.config.woff2"
 })
