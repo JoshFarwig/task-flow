@@ -5,14 +5,14 @@ import localFont from "next/font/local";
 import { cn } from "@/lib/utils"; 
 
 const headingFont = localFont({ 
-    src: "../../public/fonts/postcåss.config.woff2", 
+    src: "../public/fonts/postcss.config.woff2", 
 });  
 
 export const Logo = () => { 
-    return ( 
+    return (  
         <Link href="/"> 
             <div className="hover:opacity-75 transition items-center gap-x-2 hidden md:flex">  
-                <Image  
+                 <Image  
                 src="/logo.svg" 
                 alt="Logo"    
                 height={30}
