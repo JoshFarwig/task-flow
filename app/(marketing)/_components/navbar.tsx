@@ -19,7 +19,7 @@ export const Navbar = () => {
                         </Link> 
                     </Button> 
                     <Button size="sm" asChild>
-                        <Link href="/sign-in">  
+                        <Link href="/sign-up">  
                             Get Taskify for Free
                         </Link>
                     </Button>

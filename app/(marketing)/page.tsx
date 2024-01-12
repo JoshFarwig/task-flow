@@ -53,7 +53,7 @@ const MarketingPage = () => {
                     it all with Task Flow 
             </div> 
             <Button className="mt-6" size="lg" asChild>
-                <Link href="/signup"> 
+                <Link href="/sign-up"> 
                     Get Task Flow for Free! 
                 </Link> 
             </Button>
