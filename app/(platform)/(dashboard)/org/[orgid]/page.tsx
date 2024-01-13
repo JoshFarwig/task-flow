@@ -4,7 +4,7 @@ const OrgIdPage = () => {
     const {userId, orgId } = auth(); 
     return ( 
         <div>
-            OrgId: {orgId}
+            OrgId: {orgId} 
             userId: {userId}
         </div>
     );
