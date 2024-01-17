@@ -64,12 +64,20 @@ export const SideBar = ({
         }));
     }; 
 
-    // loading icon / page 
+    // When making a Skeleton, attempt to re-create what shows up 
+    // in Render 
     if (!isLoadedOrg || !isLoadedOrgList || userMemberships.isLoading) { 
         return ( 
             <> 
-                {/* Loading Icon */}
-                <Skeleton/>
+                <div className="flex items-center justify-between mb-2"> 
+                    <Skeleton className="h-10 w-[50%]"/>  
+                    <Skeleton className="h-10 w-10" />
+                </div>
+                <div className="space-y-2">  
+                    {/*TODO Track how many organiztions a user is in and add that many skellys*/}
+                    <NavItem.Skeleton /> 
+                    <NavItem.Skeleton />
+                </div>
             </>
         )
     }

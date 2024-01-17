@@ -8,6 +8,7 @@ import { AccordionContent, AccordionItem, AccordionTrigger } from "@/components/
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 
  
 
@@ -105,6 +106,19 @@ export const NavItem = ({
                 ))}
             </AccordionContent>
         </AccordionItem>
+    )
+} 
+
+// Creating a function to replicate the Icon in the sidebar 
+// So that it can be mapped / forEached in Loading Skeleton
+NavItem.Skeleton = function SkeletonNavItem () { 
+    return ( 
+        <div className="flex items-center gap-x-2"> 
+            <div className="w-10 h-10 relative shrink-0">
+                <Skeleton className="h-full w-full absolute"/>
+            </div> 
+            <Skeleton className="h-10 w-full" />
+        </div>
     )
 }
 
