@@ -1,6 +1,7 @@
 ## Following Code with Antonios Tutorial: Trello Clone 
 
-## TODO: 
+## TODO:  
+- [ ] Learn more on Docker-Compose
 - [ ] Prisma + MySQL Docker setup
 - [ ] Server Actions Setup
 - [ ] Custom ts hooks 
