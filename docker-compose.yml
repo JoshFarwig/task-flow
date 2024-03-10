@@ -2,12 +2,12 @@ version: '3.1'
 
 services:
   mysql-db: 
-    image: my-sql
+    image: mysql:latest
     restart: always 
     environment:
-      - MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASS}
+      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASS}
     ports:
-      - 8080:8080
+      - 3306:3306
     volumes: 
       - ./docker-data/mysql-db:/var/lib/mysql  
       

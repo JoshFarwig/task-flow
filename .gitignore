@@ -28,7 +28,7 @@ yarn-error.log*
 # local env files
 .env*.local 
 # for prisma / clerk keys 
-.env
+*.env
 
 # vercel
 .vercel
