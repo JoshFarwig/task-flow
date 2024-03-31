@@ -1,0 +1,1 @@
+useAction is similar to useMutation in ReactQuery, clone of it to use in Next.Js for server actions, allows it to be reused throughout the app, rather than implements all the logic into server compenents themselves.
