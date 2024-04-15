@@ -14,6 +14,8 @@ declare global {
 
 // Check if we have created a PrismaClient or not, will only create new PrismaClient on start up 
 export const db = globalThis.prisma || new PrismaClient(); 
-// Since we are in the development env, we will set the global prisma var to the PrismaClient created on app start
+/* Although this app won't be in prod, still good practice
+   if statements checks that we aren't in prod, 
+   and sets the global prisma var to the PrismaClient created on app start */
 if (process.env.NODE_ENV !== "production") globalThis.prisma = db; 
 
