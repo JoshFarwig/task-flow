@@ -56,7 +56,7 @@ export const BoardList = async () => {
                         role="button"
                         className="aspect-video relative h-full w-full bg-muted rounded-sm
                         flex flex-col gap-y-1 items-center justify-center hover:opacity-75
-                        transition px-4"
+                        transition"
                     >
                         <p className="text-sm">Create new board</p>
                         <span className="text-xs">
