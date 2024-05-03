@@ -1,11 +1,13 @@
 "use client"
 
+import { ListWithCards } from "@/types";
 import { List } from "@prisma/client";
+import { ListForm } from "./list-form";
 
 
 interface ListContainerProps { 
     boardId: string; 
-    data: List[]; 
+    data: ListWithCards[]; 
 } 
 
 export const ListContainer = ({
@@ -13,8 +15,9 @@ export const ListContainer = ({
     data,
 }: ListContainerProps) => { 
     return ( 
-        <div>
-            List Container
-        </div>
+        <ol>
+            <ListForm />
+            <div className="flex-shrink-0 w-1"/>
+        </ol>
     )
 }
