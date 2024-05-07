@@ -7,13 +7,16 @@ import { FormInput } from "@/components/form/form-input";
 import { useAction } from "@/hooks/use-action";
 import { updateList } from "@/actions/update-list";
 import { toast } from "sonner";
+import { ListOptions } from "./list-options";
 
 interface ListHeaderProps { 
-    data: List
+    data: List 
+    onAddCard: () => void
 }
 
 export const ListHeader = ({
-    data,
+    data, 
+    onAddCard, 
 }: ListHeaderProps) => { 
     const [title, setTitle] = useState(data.title); 
     const [isEditing, setIsEditing] = useState(false); 
@@ -23,8 +26,8 @@ export const ListHeader = ({
 
     const enableEditing = () => { 
         setIsEditing(true); 
-        // Says to only use as last resort, not best implementation for production, allows user have to not click twice on input 
-        // Could also use flushSync? also poor implementation tho. 
+        // Says to only use as last resort, not best implementation for production, but allows user have to not click twice on input 
+        // Could also use flushSync instead of timeout? also poor implementation tho. 
         setTimeout(() => { 
             inputRef.current?.select()
         })
@@ -102,6 +105,10 @@ export const ListHeader = ({
                     {title}
                 </div>
             )}
+            <ListOptions   
+                onAddCard={onAddCard}
+                data={data}
+            />
         </div>
     ) 
 }
